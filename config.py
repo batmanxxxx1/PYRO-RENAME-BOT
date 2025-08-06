@@ -26,9 +26,9 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "8114810188:AAEy-VSBOkV3n429i8InXC64ln-uLTjrMcw")
-    API_HASH  = os.environ.get("API_HASH", "20340960")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "731d6413f609e18766e56908534d4ae2") 
+    API_ID    = os.environ.get("API_ID","8114810188:AAEy-VSBOkV3n429i8InXC64ln-uLTjrMcw")
+    API_HASH  = os.environ.get("API_HASH","20340960")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN","731d6413f609e18766e56908534d4ae2") 
    
     # database config
     DB_NAME = os.environ.get("DB_NAME","sukunaaaabot")     
@@ -36,14 +36,14 @@ class Config(object):
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "https://envs.sh/IJu.jpg?=ilovSTARLEY")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '597083078').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "-4828001551") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002794290081"))
-    MAX_CONCURRENT_TRANSMISSIONS = int(os.environ.get("MAX_CONCURRENT_TRANSMISSIONS", "2")) # Set the maximum amount of concurrent transmissions (uploads & downloads).
+    START_PIC   = os.environ.get("START_PIC","https://envs.sh/IJu.jpg?=ilovSTARLEY")
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN','597083078').split()]
+    FORCE_SUB   = os.environ.get("FORCE_SUB","-4828001551") 
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","-1002794290081"))
+    MAX_CONCURRENT_TRANSMISSIONS = int(os.environ.get("MAX_CONCURRENT_TRANSMISSIONS", "100000")) # Set the maximum amount of concurrent transmissions (uploads & downloads).
     
     # wes response configuration     
-    WEB_SUPPORT = bool(os.environ.get("WEB_SUPPORT", "True"))
+    WEB_SUPPORT = bool(os.environ.get("WEB_SUPPORT","True"))
 
 
 
